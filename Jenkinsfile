@@ -14,7 +14,7 @@ pipeline {
                         git url: 'https://github.com/SirCucumber/cypress-automation-framework.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerAllTests-autostore-dashboard'
+                        bat 'set NO_COLOR=1 && npm run %Script%'
                     }
                 }
                 stage('Slave Node2') {
@@ -25,7 +25,7 @@ pipeline {
                         git url: 'https://github.com/SirCucumber/cypress-automation-framework.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerAllTests-autostore-dashboard'
+                        bat 'set NO_COLOR=1 && npm run %Script%'
                     }
                 }
             }
